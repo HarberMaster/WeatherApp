@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         checkWeather?.setOnClickListener(){
             Log.d("MainActivity", "onCheckWeather")
             val zipCodeVal = zipCode.text.toString()
-            if(zipCodeVal.length > 5){
+            if(zipCodeVal.length > 5 || zipCodeVal.isEmpty() || zipCodeVal.length < 5){
                 Toast.makeText(applicationContext, "Invalid zip code: [$zipCodeVal], please enter 5 digit zip", Toast.LENGTH_SHORT).show()
             }
             else{
